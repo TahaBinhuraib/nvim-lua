@@ -31,8 +31,11 @@ return require('packer').startup(function(use)
   }
 }
   use('nvim-treesitter/nvim-treesitter', {run =  ':TSUpdate'})
-  use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
-  use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+  use("jose-elias-alvarez/null-ls.nvim")
+  use("jayp0521/mason-null-ls.nvim")
+  use("windwp/nvim-autopairs") 
+  use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" })
+
 
 
 end)
